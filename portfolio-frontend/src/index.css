@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global body styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+}
+
+/* Custom section spacing */
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0891b2;
+}
+
+/* Glow effect for hero text */
+.glow-text {
+    text-shadow: 0 0 10px rgba(0,255,255,0.7),
+    0 0 20px rgba(0,255,255,0.5);
+}
+
+/* Button hover smooth */
+button {
+    transition: all 0.3s ease;
+}
