@@ -5,10 +5,13 @@ import org.springframework.web.bind.annotation.*;
 
 import com.laki.portfolio.model.Contact;
 import com.laki.portfolio.repository.ContactRepository;
-import com.laki.portfolio.service.EmailService;   // ✅ IMPORTANT IMPORT
+import com.laki.portfolio.service.EmailService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "https://cerulean-hummingbird-1e9598.netlify.app"
+})
 @RequestMapping("/contact")
 public class ContactController {
 
