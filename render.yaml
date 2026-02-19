@@ -1,7 +1,7 @@
 services:
   - type: web
     name: portfolio-backend
-    env: docker
+    runtime: image
     plan: free
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/portfolio-0.0.1-SNAPSHOT.jar
