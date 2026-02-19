@@ -4,11 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-# give permission to mvnw
-RUN chmod +x mvnw
+# Fix permission + line endings
+RUN chmod +x mvnw && sed -i 's/\r$//' mvnw
 
 RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/portfolio-backend-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/portfolio-backend-only-0.0.1-SNAPSHOT.jar"]
